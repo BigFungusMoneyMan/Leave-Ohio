@@ -198,6 +198,6 @@ function Minnisota () {
 function UnOhio () {
 	
 }
-adventure.addToTextlog("Hello! Press (A) to continue once done reading. Have fun! ")
+adventure.addToTextlog("Hello there! Press (A) to continue once done reading. Have fun! ")
 Pause_Until_A()
 Start()
