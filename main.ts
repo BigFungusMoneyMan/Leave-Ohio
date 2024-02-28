@@ -33,8 +33,53 @@ function Start () {
 function Michigan () {
     adventure.addToTextlog("A large sign says \"Welcome to Michigan\"")
     Pause_Until_A()
+    adventure.addToTextlog("You decide to head to the one city you heard about in Michigan, Detroit.")
+    Pause_Until_A()
+    adventure.addToTextlog("As you enter the city you notice something very strange...")
+    Pause_Until_A()
+    adventure.addToTextlog("All of your money has disappeared.  ")
+    Pause_Until_A()
+    adventure.addToTextlog("And as you look around, you notice that no one has anything.")
+    Pause_Until_A()
+    adventure.addToTextlog("And all the housing seems to be simple communal shelters.")
+    Pause_Until_A()
+    adventure.addToTextlog("Oh no, Its COMMUNIST DETROIT, hopefully you can make it through okay.")
+    Pause_Until_A()
+    adventure.addToTextlog("The gates close behind you and won't open again, your going to have to find another way out.")
+    Pause_Until_A()
+    adventure.addToTextlog("You have some options, you could go to the homeless shelter (Left), into a dark alleyway ")
+    Pause_until_ANY()
+    if (controller.left.isPressed()) {
+        adventure.addToTextlog("")
+    } else if (controller.right.isPressed()) {
+    	
+    } else if (controller.up.isPressed()) {
+    	
+    } else if (controller.down.isPressed()) {
+    	
+    }
+    adventure.addToTextlog("")
+    Pause_Until_A()
+    adventure.addToTextlog("")
+    Pause_Until_A()
+    adventure.addToTextlog("")
+    Pause_Until_A()
+    adventure.addToTextlog("")
+    Pause_Until_A()
+    adventure.addToTextlog("")
+    Pause_Until_A()
+    adventure.addToTextlog("")
+    Pause_Until_A()
+    adventure.addToTextlog("")
+    Pause_Until_A()
+    adventure.addToTextlog("")
+    Pause_Until_A()
+    adventure.addToTextlog("")
 }
 function Ohiofication () {
+	
+}
+function Iowa () {
 	
 }
 function Pause_Until_A () {
@@ -46,6 +91,9 @@ function NYC () {
 function Pensilvania () {
     adventure.addToTextlog("A large sign says \"Welcome to Pennsylvania\"")
     Pause_Until_A()
+}
+function Illinois () {
+	
 }
 function Death () {
 	
@@ -124,6 +172,16 @@ function Wisconsin () {
         adventure.addToTextlog("\"Fine\" says the man \"Keep on going, there's a exit just up ahead\"")
         Pause_Until_A()
         adventure.addToTextlog("You have 4 options;Michigan (Right) Iowa (Left) Illinois (Down) Minnesota (Up) ")
+        Pause_until_ANY()
+        if (controller.left.isPressed()) {
+            Iowa()
+        } else if (controller.right.isPressed()) {
+            Michigan()
+        } else if (controller.up.isPressed()) {
+            Minnisota()
+        } else if (controller.down.isPressed()) {
+            Illinois()
+        }
     }
     adventure.addToTextlog("")
 }
@@ -133,6 +191,9 @@ function Wyoming () {
 function Indiana () {
     adventure.addToTextlog("A large sign says \"Welcome to Indiana\"")
     Pause_Until_A()
+}
+function Minnisota () {
+	
 }
 function UnOhio () {
 	
