@@ -282,6 +282,7 @@ function Michigan () {
     adventure.addToTextlog("As you enter the city you notice something very strange...")
     Pause_Until_A()
     adventure.addToTextlog("All of your money has disappeared.  ")
+    adventure.setScoreOverride(adventure.Currency.Coins, 0)
     Pause_Until_A()
     adventure.addToTextlog("And as you look around, you notice that no one has anything.")
     Pause_Until_A()
