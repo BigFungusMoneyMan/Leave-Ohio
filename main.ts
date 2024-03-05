@@ -481,14 +481,7 @@ function Minnisota () {
             Pause_Until_A()
             adventure.addToTextlog("A flash of bright light engulfs you. Upon reopening your eyes you see something shocking.")
             Pause_Until_A()
-            scene.setBackgroundImage(assets.image`unohio`)
-            adventure.changeLogColors(2, 3)
-            adventure.addToTextlog("Maple trees and pools of ice are scattered everywhere. It seems you're in Canada!")
-            Pause_Until_A()
-            adventure.addToTextlog("You heard about this place somewhere before. It's UN-OHIO!!! Ohio can never come here!!!!!!")
-            game.setGameOverEffect(true, effects.confetti)
-            game.setGameOverMessage(true, "What the heck? You actually did it!")
-            game.gameOver(true)
+            UnOhio()
         } else if (controller.B.isPressed()) {
             adventure.addToTextlog("Why would you do that? It's so cold out. You freeze and die.")
             Pause_Until_A()
@@ -498,7 +491,14 @@ function Minnisota () {
     }
 }
 function UnOhio () {
-	
+    scene.setBackgroundImage(assets.image`unohio`)
+    adventure.changeLogColors(2, 3)
+    adventure.addToTextlog("Maple trees and pools of ice are scattered everywhere. It seems you're in Canada!")
+    Pause_Until_A()
+    adventure.addToTextlog("You heard about this place somewhere before. It's UN-OHIO!!! Ohio can never come here!!!!!!")
+    game.setGameOverEffect(true, effects.confetti)
+    game.setGameOverMessage(true, "What the heck? You actually did it!")
+    game.gameOver(true)
 }
 adventure.addToTextlog("Hello there! Press (A) to continue once done reading. Have fun! ")
 Pause_Until_A()
