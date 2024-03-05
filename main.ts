@@ -565,7 +565,58 @@ function Indiana () {
     Pause_Until_A()
 }
 function Minnisota () {
-	
+    adventure.addToTextlog("In front of you is a sign that says \"Welcome to minnesota\"")
+    scene.setBackgroundImage(assets.image`mini soda`)
+    Pause_Until_A()
+    adventure.addToTextlog("As you look around, it seems to be barren snowy wastes as far as you can see")
+    Pause_Until_A()
+    adventure.addToTextlog("Other than that forest")
+    adventure.addToTextlog("Press left to proceed to the field and right for forest")
+    Pause_until_ANY()
+    if (controller.left.isPressed()) {
+        adventure.addToTextlog("You proceed into the field. A polar bear approaches you")
+        Pause_Until_A()
+        adventure.addToTextlog("He offers you a mini soda, but it seems to be frozen solid. Do you accept? ")
+        adventure.addToTextlog("(A) To accept, (B) To decline")
+        Pause_until_ANY()
+        if (controller.A.isPressed()) {
+            adventure.addToTextlog("You gladly accept! You try to drink the soda, but a solid mass of ice comes out. You choke and die.")
+            Pause_Until_A()
+            game.setGameOverEffect(false, effects.dissolve)
+            game.gameOver(false)
+        } else if (controller.B.isPressed()) {
+            adventure.addToTextlog("The bear becomes enraged and claws you to bits. You die.")
+            Pause_Until_A()
+            game.setGameOverEffect(false, effects.slash)
+            game.gameOver(false)
+        }
+    } else if (controller.right.isPressed()) {
+        adventure.addToTextlog("You wander through the woods for a while and you see a small shed")
+        Pause_Until_A()
+        adventure.addToTextlog("Do you enter the shed? It is very cold out after all. A to go in, B to turn around.")
+        Pause_until_ANY()
+        if (controller.A.isPressed()) {
+            adventure.addToTextlog("Inside the shed you see a teleportation pad.")
+            Pause_Until_A()
+            adventure.addToTextlog("You think any place would be better than here, so without thinking you step on it.")
+            Pause_Until_A()
+            adventure.addToTextlog("A flash of bright light engulfs you. Upon reopening your eyes you see something shocking.")
+            Pause_Until_A()
+            scene.setBackgroundImage(assets.image`unohio`)
+            adventure.changeLogColors(2, 3)
+            adventure.addToTextlog("Maple trees and pools of ice are scattered everywhere. It seems you're in Canada!")
+            Pause_Until_A()
+            adventure.addToTextlog("You heard about this place somewhere before. It's UN-OHIO!!! Ohio can never come here!!!!!!")
+            game.setGameOverEffect(true, effects.confetti)
+            game.setGameOverMessage(true, "What the heck? You actually did it!")
+            game.gameOver(true)
+        } else if (controller.B.isPressed()) {
+            adventure.addToTextlog("Why would you do that? It's so cold out. You freeze and die.")
+            Pause_Until_A()
+            game.setGameOverEffect(false, effects.clouds)
+            game.gameOver(false)
+        }
+    }
 }
 function UnOhio () {
 	
