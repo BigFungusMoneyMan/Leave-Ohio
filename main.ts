@@ -1,3 +1,6 @@
+function Hell () {
+	
+}
 function California () {
     adventure.addToTextlog("this doesnt exist californias dead remember")
 }
@@ -6,9 +9,6 @@ function Nevada () {
 }
 function Pause_until_ANY () {
     pauseUntil(() => controller.anyButton.isPressed())
-}
-function Canada () {
-	
 }
 function Start () {
     adventure.setScoreOverride(adventure.Currency.Coins, 1)
@@ -437,7 +437,13 @@ function Wisconsin () {
     adventure.addToTextlog("")
 }
 function Wyoming () {
-	
+    adventure.addToTextlog("You see ahead of you a large rectangular pit instead of a state.")
+    scene.setBackgroundImage(assets.image`wyoming moment`)
+    Pause_Until_A()
+    adventure.addToTextlog("You don't know why or how this is, but you decide to check it out.")
+    Pause_Until_A()
+    adventure.addToTextlog("You fell in.")
+    Hell()
 }
 function Indiana () {
     adventure.addToTextlog("A large sign says \"Welcome to Indiana\"")
