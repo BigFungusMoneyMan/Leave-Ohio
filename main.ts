@@ -1,5 +1,5 @@
 function California () {
-	
+    adventure.addToTextlog("this doesnt exist californias dead remember")
 }
 function Nevada () {
 	
