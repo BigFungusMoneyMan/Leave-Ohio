@@ -1,9 +1,6 @@
 function Hell () {
 	
 }
-function California () {
-    adventure.addToTextlog("this doesnt exist californias dead remember")
-}
 function Nevada () {
 	
 }
@@ -171,100 +168,74 @@ function Michigan () {
     Pause_Until_A()
     adventure.addToTextlog("The gates close behind you and won't open again, your going to have to find another way out.")
     Pause_Until_A()
-    adventure.addToTextlog("You have some options, you could go to the homeless shelter (Left), into a dark alleyway ")
+    adventure.addToTextlog("You have some options, you could go to the homeless shelter (Left), into a dark alleyway (Right)")
     Pause_until_ANY()
     if (controller.left.isPressed()) {
-        adventure.addToTextlog("")
+        adventure.addToTextlog("You walk in and look around. Lots of homeless people are sitting on sleeping bags and things.")
+        Pause_Until_A()
+        adventure.addToTextlog("You're about to ask one of them directions out of Detroit, but someone sneaks up behind you and stabs you.")
+        Pause_Until_A()
+        adventure.addToTextlog("You bleed out and die.")
+        Pause_Until_A()
+        game.setGameOverEffect(false, effects.splatter)
+        game.gameOver(false)
     } else if (controller.right.isPressed()) {
-    	
-    } else if (controller.up.isPressed()) {
-    	
-    } else if (controller.down.isPressed()) {
-    	
+        adventure.addToTextlog("You enter the alleyway and see a man hiding in a hole in one of the walls.")
+        Pause_Until_A()
+        adventure.addToTextlog("\"WHO SENT YOU?")
+        adventure.addToTextlog("Press (A) to say \"Communism\" Press (B) to ask \"what?\"")
+        Pause_until_ANY()
+        if (controller.A.isPressed()) {
+            adventure.addToTextlog("The man seems angry. He opens his mouth wide. Wider.")
+            Pause_Until_A()
+            adventure.addToTextlog("He unhinges his jaw like a python, revealing rows and rows of teeth, all of which seem to be made of money.")
+            Pause_Until_A()
+            adventure.addToTextlog("He sucks you into his mouth using his pure American lungs, and as you enter his mouth you are converted to pure cash.")
+            Pause_Until_A()
+            adventure.addToTextlog("The last thing you hear before everything fades to black is \"YOUR RENT HAS JUST INCREASED\"")
+            Pause_Until_A()
+            game.setGameOverEffect(false, effects.hearts)
+            game.gameOver(false)
+        } else if (controller.B.isPressed()) {
+            adventure.addToTextlog("Oh good, you're not one of them.")
+            Pause_Until_A()
+            adventure.addToTextlog("I'm the monopoly man.")
+            Pause_Until_A()
+            adventure.addToTextlog("This town used to be a place of bustling markets and sturdy infustructure.")
+            Pause_Until_A()
+            adventure.addToTextlog("But then the tower rose.")
+            Pause_Until_A()
+            adventure.addToTextlog("It started turning the people closest to it into communism trolls.")
+            Pause_Until_A()
+            adventure.addToTextlog("Everyone else got all their money consumed by the vortex.")
+            Pause_Until_A()
+            adventure.addToTextlog("Now the trolls rule the city, i'm one of the survivors, trying to smuggle people out of the city.")
+            Pause_Until_A()
+            adventure.addToTextlog("Thank you for listening to my tale. Take 5G as a thanks.")
+            adventure.changeScoreOverride(adventure.Currency.Coins, 5)
+            Pause_Until_A()
+            adventure.addToTextlog("GOODNESS GRACIOUS! LOOK BEHIND YOU! A TROLL!!!!")
+            Pause_Until_A()
+            adventure.addToTextlog("Do you punch the troll (A) or try to flee (B)")
+            Pause_until_ANY()
+        }
+        if (controller.A.isPressed()) {
+            adventure.addToTextlog("The power of freedom and democracy courses through your veins and you punch the troll with such sheer strength that the troll explodes and it rips a hole in space time")
+            Pause_Until_A()
+            adventure.addToTextlog("Desperate to escape, you beckon back at Monopoly Man but he shakes his head.")
+            Pause_Until_A()
+            adventure.addToTextlog("\"I can't leave here friend. I have to save any other survivers. Now go, that portal should lead you to a safe place.")
+            Pause_Until_A()
+            adventure.addToTextlog("The monopoly man uses money magic to make it so the portal takes you to nebraska. Then he pushes you through.")
+            Nebraska()
+        } else if (controller.B.isPressed()) {
+            adventure.addToTextlog("You run away out of the alleyway and into the eye of communism's domain.")
+            Pause_Until_A()
+            adventure.addToTextlog("Yeah it lazers you to death.")
+            game.setGameOverEffect(false, effects.melt)
+            game.gameOver(false)
+        }
     }
-    adventure.addToTextlog("")
-    Pause_Until_A()
-    adventure.addToTextlog("")
-    Pause_Until_A()
-    adventure.addToTextlog("")
-    Pause_Until_A()
-    adventure.addToTextlog("")
-    Pause_Until_A()
-    adventure.addToTextlog("")
-    Pause_Until_A()
-    adventure.addToTextlog("")
-    Pause_Until_A()
-    adventure.addToTextlog("")
-    Pause_Until_A()
-    adventure.addToTextlog("")
-    Pause_Until_A()
-    adventure.addToTextlog("")
-    adventure.addImageToTextLog(img`
-        ...eddd5.4......................................................
-        ..edd5de4..4....................................................
-        .edd5e.de14.....................................................
-        .ed5e.e.de5.....................................................
-        .e5e.e.e.d4.....................................................
-        .ed1e.e.e.4.....................................................
-        .eed1e.e.ed5....................................................
-        .4eed1e.eded5...................................................
-        4..eee1ededed5..................................................
-        ..4.eeedededed1.................................................
-        .4....eededede51................................................
-        .......eedede4ed1...............................................
-        ........eede4ede51..............................................
-        .........eedede4ed1.............................................
-        ..........eede4ede51............................................
-        ...........eedede4ed1...........................................
-        ............eede4ede51..........................................
-        .............eedede4ed1.........................................
-        ..............eede4eded1........................................
-        ...............eedededed1.......................................
-        ................eedededed5......................................
-        .................eedededed5.....................................
-        ..................eedededed5....................................
-        ...................eedededed544444444455555.....................
-        ....................eededededdddddddddddddd51...................
-        .....................eededededdddddddddddddd441.................
-        ......................eededededddddddddddddddd44................
-        .......................eededededdddddd5ddddddddd4...............
-        .......................eeddedededdddddddd5ddddddd4..............
-        .......................eedddedededeeeeddddddddddd4..............
-        .......................eeddddedede4444eddddddddddd4.............
-        .......................eedddddede4eccc4edd5ddddddd4.............
-        .......................eedddddde4ececcc4edddddddddd4............
-        .......................eeddddde4ecececc4edddddddddd5............
-        .......................eeddddde4cececec4edddddddddd5............
-        .......................eeddddde4ccecece4eddddddd4dd5eeee........
-        .......................eeddd5dee4ccececeddddddd5ddd4ddde5e......
-        .......................eeddddddde4ccecededddddddddddddddd55.....
-        .......................eedddddddde444edededdd4dddddddddddd55....
-        .......................eeddddddddeeeedededed5dddddddddddddd55...
-        .......................eeddd5ddddddddddedededddddddddddddddde5..
-        .......................eeedddddd5dddddddedededddddddddddddddde5.
-        ........................eedddddddddddddddedededddddddddddddddd55
-        ........................eeeddddddddddddd4dedededdddddddddddddde5
-        .........................eeddddddddddddddddedededdddddddddddddd4
-        .........................eeedddddddddd5dddddedededddddddddddddd4
-        ..........................eeeddddddddddddddddedededdddddddddddd4
-        ...........................eeeeddddd4dddddddddededefddddddddddd4
-        ............................eeeeeddddddddddddddedefeddddddddddd4
-        ..............................eeeeddddddddddddddefedddddddddddde
-        ................................eeddddddddddddddfeddddddddddddee
-        .................................eeddddddddddddddddddddddddddee.
-        .................................eedddddddddddddddddddddddddeee.
-        .................................eeddddddddddddddddddddddddeee..
-        .................................eeeddddddddddddddddddddddeee...
-        ..................................eedddddddddddddddddddddeee....
-        ..................................eeedddddddddddddddddddeee.....
-        ...................................eeddddddddddddddddddeee......
-        ...................................eeeddddddddddddddddeee.......
-        ....................................eeeddddddddddddddeee........
-        .....................................eeeddddddddddddeee.........
-        ......................................eeeddddddddddeee..........
-        .......................................eeeeeeeeeeeeee...........
-        ........................................eeeeeeeeeeee............
-        `)
 }
 function Ohiofication () {
     adventure.addImageToTextLog(assets.image`tentacle`)
@@ -283,9 +254,6 @@ function Pensilvania () {
     Pause_Until_A()
 }
 function Illinois () {
-	
-}
-function Death () {
 	
 }
 function Kentucky () {
@@ -488,18 +456,27 @@ function Wisconsin () {
         Pause_Until_A()
         adventure.addToTextlog("\"Fine\" says the man \"Keep on going, there's a exit just up ahead\"")
         Pause_Until_A()
-        adventure.addToTextlog("You have 4 options;Michigan (Right) Iowa (Left) Illinois (Down) Minnesota (Up) ")
+        adventure.addToTextlog("You have 4 options;Michigan (Left) or Minnisota (Right) ")
         Pause_until_ANY()
         if (controller.left.isPressed()) {
-            Iowa()
-        } else if (controller.right.isPressed()) {
             Michigan()
-        } else if (controller.up.isPressed()) {
+        } else if (controller.right.isPressed()) {
             Minnisota()
-        } else if (controller.down.isPressed()) {
-            Illinois()
         }
     }
+}
+function Nebraska () {
+    adventure.addToTextlog("There is a sign in front of you that says \"Welcome to Nebraska.")
+    scene.setBackgroundImage(assets.image`nebraska`)
+    Pause_Until_A()
+    adventure.addToTextlog("You see a tower looming in the distance, made of money. You know without a doubt it's the eye of capitalism.")
+    Pause_Until_A()
+    adventure.addToTextlog("While most capitalists are vicious and greedy, this tower has a welcoming aura about it. It seems as if it can sense your struggles.")
+    Pause_Until_A()
+    adventure.addToTextlog("\"Hello traveler\" the tower says to you.")
+    Pause_Until_A()
+    adventure.addToTextlog("I hear you're trying to leave Ohio. Why settle for that when you can destroy it?")
+    Pause_Until_A()
     adventure.addToTextlog("")
 }
 function Wyoming () {
